@@ -4,6 +4,8 @@ import android.content.Context
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -11,7 +13,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 import java.net.URL
 
-class MainActivity : AppCompatActivity() {
+class MainActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,5 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().addToBackStack(null).replace(R.id.fragment, MainFragment()).commit();
     }
+
 }
 
