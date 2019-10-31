@@ -50,6 +50,7 @@ class GameDetailFragment(val game: Game) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         game_detail.text = game.name;
+        description.text = game.description;
         Picasso.get().load(game.img).into(image_detail);
     }
 
