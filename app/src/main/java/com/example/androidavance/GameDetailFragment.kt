@@ -1,6 +1,5 @@
 package com.example.androidavance
 
-import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -50,7 +49,7 @@ class GameDetailFragment(val game: Game) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        game_detail.text = game.title;
+        game_detail.text = game.name;
         Picasso.get().load(game.img).into(image_detail);
     }
 

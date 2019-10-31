@@ -22,7 +22,7 @@ class TextAdapter(private val game: IGame) : androidx.recyclerview.widget.Recycl
 
     override fun onBindViewHolder(holder: TextViewHolder, position: Int) {
         val game: Game = game.games[position];
-        holder.view.textView.text = game.title;
+        holder.view.textView.text = game.name;
         Picasso.get().load(game.img).into(holder.view.image);
         holder.view.setOnClickListener{
             this.game.open(game);
